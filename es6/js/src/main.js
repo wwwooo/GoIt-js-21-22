@@ -51,9 +51,3 @@ $(function() {
         showModal(countAnswers);
     });
 });
-
-try {
-    module.exports = function(a, b) {
-        return a + b;
-    };
-} catch (e) {}
