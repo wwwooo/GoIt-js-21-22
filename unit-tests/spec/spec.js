@@ -1,4 +1,4 @@
-var pow = require('../js/app.js');
+var pow = require('../pow.js');
 
 describe('fun', function() {
     it('should call pow(2, 0)', function() {

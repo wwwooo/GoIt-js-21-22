@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ксения Малиновская</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/dist/tmpl.js"></script>
+    <script src="js/dist/main.js"></script>
+</head>
+<body>
+    <script type="text/html" id="item_tmpl">
+        <h1><%= what_test %></h1>
+        <form action="#">
+            <ol>
+            <% for (var i = 0; i < questions.length; i++) { %>
+                <li class="question-wrap">
+                    <span class="question"><%= questions[i].question %></span>
+                    <% for (var n = 0; n < questions[i].answers.length; n++) { %>
+                        <label>
+                            <span class="answer"><%= questions[i].answers[n] %></span>
+                            <input type="radio" name=<%= 'radio-' + i %>>
+                            <span class="cbx"></span>
+                        </label>
+                    <% } %>
+                </li>
+            <% } %>
+            </ol>
+            <input type="submit" value="Проверить мои результаты">
+        </form>
+    </script>
+</body>
+</html>

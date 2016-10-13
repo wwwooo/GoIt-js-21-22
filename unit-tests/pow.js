@@ -12,7 +12,6 @@ var pow = function(a, x) {
         }
         return result;
     }
-
 };
 
 module.exports = pow;
